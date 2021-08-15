@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A marketplace application that allows users to sell items that they no longer need.",
+    "githubUrl": "https://github.com/MarcJacques/DoneWithIt"
   }
 }
