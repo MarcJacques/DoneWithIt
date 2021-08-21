@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image, SafeAreaView } from 'react-native';//add SafeAreaView to keep content in clear and viewable areas on the screen
+import { StyleSheet, SafeAreaView, Button} from 'react-native';//add SafeAreaView to keep content in clear and viewable areas on the screen
 
 export default function App() {
 console.log("App executed");
@@ -9,17 +9,7 @@ console.log("App executed");
     // 1. this is how you setup a view.
     // 2. be sure to keep track of how long text is. especially when using a limited numberOfLines; text will be truncated to fit the limit. 
     <SafeAreaView style={styles.container}> 
-      <Text>Hello React Native</Text>
-      <TouchableOpacity onPress={() => console.log("Image tapped")}>
-          <Image 
-            source={{
-            width: 200,
-            height: 300,
-            uri: "https://picsum.photos/200/300"
-            }} 
-            />
-      </TouchableOpacity>
-      <StatusBar style="auto" />
+    <Button title="Click Me" onPress={() => console.log("Button tapped")} />
     </SafeAreaView>
   );
 }
