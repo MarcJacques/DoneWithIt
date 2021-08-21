@@ -1,14 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';//add SafeAreaView to keep content in clear and viewable areas on the screen
 
 export default function App() {
 console.log("App executed");
 
+const handlePress = () => console.log("Text Pressed")
+
   return (
-    // this is how you setup a view. 
+    // 1. this is how you setup a view.
+    // 2. be sure to keep track of how long text is. especially when using a limited numberOfLines; text will be truncated to fit the limit. 
     <SafeAreaView style={styles.container}> 
-      <Text>Hello React Native</Text>
+      <Text numberOfLines={1} onPress={handlePress}>
+      Hello React Native - A really really long text. I am making this even longer to see what happens!
+      </Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
